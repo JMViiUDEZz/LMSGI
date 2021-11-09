@@ -1,0 +1,167 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+header {
+  height: 100px;
+  background-color: rgba(0, 255, 0, 0.3);
+}
+header figure {
+  border: 2px solid red;
+  height: 100%;
+  float: left; /* transformo EB --> El */
+  width: 10%;
+  background-color: red;
+}
+
+header figure img {
+  height: 100%;
+  
+}
+
+header div#middle {
+  width: 65%;
+  float: left;
+  background-color: khaki;
+  height: 100%;
+}
+header div#middle h1 {
+  color: blue;
+  background-color: rgba(0, 0, 255, 0.3);
+  margin: 0 auto;
+}
+
+header div#middle nav {
+  background-color: rgba(255, 0, 0, 0);
+  margin: 0 auto;
+  padding: 5px;
+}
+
+head div#middle nav span {
+  font-size: 20px;
+}
+
+header #middle nav a {
+  text-decoration: none;
+  border: 2px solid black;
+  border-radius: 10px;
+  padding: 10px;
+  margin-right: 10px;
+  background-color: violet;
+  transition: 1s;
+}
+
+header #middle nav a:hover i {
+  color: white;
+}
+
+header #middle nav a:hover {
+  background-color: tomato;
+}
+
+header #middle nav a:hover span {
+  color: white;
+}
+
+header div#registro {
+  float: left; /*Elemento de Bloque en elemento de Linea*/
+  width: 25%;
+  background-color: lawngreen;
+  height: 100%;
+}
+
+header #middle nav i {
+  font-size: 20px;
+  color: green;
+}
+
+main {
+  height: 550px;
+  background-color: rgba(255, 0, 0, 0.3);
+}
+
+main nav {
+  background-color: greenyellow;
+  height: 100px;
+  width: 20%;
+  float: left;
+}
+
+main nav a {
+  border: 2px solid black;
+  display: block; /*Elemento de linea en elemento de bloque*/
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: blueviolet;
+  width: 90%;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+main nav a:hover {
+  background-color: rgb(226, 80, 43);
+  transition: 2s all;
+}
+
+main nav a:hover i {
+  color: white;
+  transition: 0.5s;
+}
+main nav a:nth-child(odd) {
+  margin-top: 30px;
+  background-color: rgba(57, 57, 255, 0.671);
+}
+/*de los hijos(a) coje el 1(primero) ya que hay 3*/
+/*even=par y odd=impar*/
+
+main #middle {
+  background-color: rgb(30, 24, 85);
+  height: 400px;
+  width: 60%;
+  float: left;
+}
+
+main aside {
+  background-color: rgb(255, 0, 0);
+  height: 90%;
+  width: 20%;
+  float: left;
+}
+main aside div {
+  height: 40%;
+  border: 2px solid black;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background-color: white;
+  width: 95%;
+  margin: 0 auto;
+  border-radius: 10px;
+  box-shadow: 3px 3px grey;
+}
+main aside #valorados {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+main aside #conectados {
+  background-color: blue;
+  border-radius: 0px !important; /*quitar el border-radius poniendo none o 0px con lo de important*/
+}
+footer {
+  height: 100px;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+footer #mapa {
+  background-color: yellow;
+  height: 100%;
+  width: 50%;
+  float: left;
+}
+
+footer #sociales {
+  background-color: rgb(26, 201, 119);
+  height: 100%;
+  width: 50%;
+  float: left;
+}
