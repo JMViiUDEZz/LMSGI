@@ -1,0 +1,115 @@
+*{
+    padding: 0;
+    margin:0;
+    box-sizing: border-box;
+}
+header {
+    background-color: rgba(0, 0, 0, 0.308);
+    display: flex;
+    flex-flow: column nowrap;
+}
+header #top {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+    font-family: Dosis;
+    height: 100px;
+}
+header #top a#navicon{
+    color: white;
+    font-size: 40px;
+    border: 0px solid white;
+    text-align: right;
+}
+header #top nav#menu-nav {
+    display: none;
+}
+header #top #logo #auto{
+    display: none;
+}
+header #bottom {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    
+}
+
+header #bottom nav#menu a{
+    color:blue;
+    text-decoration: none;
+    font-family: Dosis;
+}
+header #bottom nav#sociales {
+    width: 20%;
+    background-color: none;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: center;
+}
+header #bottom nav#sociales a {
+    width: 20%;
+    background-color: none;
+    text-align: center;
+    color: black;
+    transition: all 1s;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+header #bottom nav#sociales a:hover {
+    color: blue;
+}
+
+
+header #bottom nav#menu{
+    width:80%;
+    display: flex;
+    flex-flow: row nowrap;
+}
+header #bottom nav#menu a {
+    height: 20%;
+    padding: 10px;
+    display:flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    font-size: 20px;
+    text-decoration: none;
+    font-family: Dosis;
+    color: black;
+}
+header #bottom nav#menu a:hover {
+    color: blue;
+}
+header #bottom nav#menu a i {
+    width: 10%;
+    display: none;
+    background-color: none;
+    text-align: center;
+}
+section {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+
+section article {
+    margin-top: 10px;;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+
+section article figure {
+    width: 100%;
+    margin: 0 auto;
+}
+
+section article figure img {
+    width: 100%
+}
+main #texto{
+    font-family: Charmonman;
+}

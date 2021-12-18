@@ -1,0 +1,61 @@
+.max-width {
+  max-width: 1300px;
+}
+header #navbar.sticky ul {
+  padding-top: 5px;
+}
+header #navbar .menu {
+  width: 0%;
+  background: none;
+  padding-top: 22px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  width: 70%;
+  left: 33%;
+  height: 0;
+}
+header #navbar .menu.active {
+  left: 33%;
+}
+header #navbar .menu li {
+  display: inline-block;
+}
+header #navbar .menu li a {
+  display: block;
+  font-size: 18px;
+  margin-left: 45px;
+}
+header nav .max-width .menu-btn {
+  display: none;
+}
+.home .max-width {
+  margin-left: 600px;
+}
+.home .home-content a {
+  font-size: 25px;
+  padding: 12px 36px;
+}
+.sobremi-content {
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+.sobremi .sobremi-content .right {
+  flex: 0%;
+}
+.sobremi .sobremi-content .left img {
+  height: 400px;
+  width: 400px;
+}
+.servicios .serv-content .card {
+  width: calc(33% - 20px);
+}
+.formacion .formacion-content .column {
+  width: calc(50% - 30px);
+}
+.contacto .contacto-content .column {
+  width: calc(50% - 30px);
+}
+.social {
+  display: inline;
+}

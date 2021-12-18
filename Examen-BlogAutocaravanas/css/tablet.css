@@ -1,0 +1,67 @@
+
+header #top{
+    order: 2;
+}
+header #bottom{
+    order: 1;
+}
+header #bottom nav#sociales{
+
+}
+header #bottom nav#sociales a{
+    font-size: 20px;
+    padding: 30px;
+}
+header #bottom #menu{
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+}
+header #top #logo #banimar{
+    display: none;
+}
+header #top nav#navicon{
+    display: none;
+}
+header #top a#navicon{
+    display: none;
+}
+header #top #logo img{
+    height: 40px;
+    border: none;
+    display: block;
+    margin: auto;
+}
+header #top #logo #auto{
+    display: inline;
+}
+header #top nav#menu-nav {
+    display: inline;
+
+}
+header #top nav#menu-nav a{
+    text-decoration: none;
+    color: black;
+    padding: 10px;
+
+}
+header #top nav#menu-nav a:hover{
+    color: blue;
+    text-decoration: underline ;
+}
+main #texto{
+    display: inline;
+    font-family: Dosis;
+    order: 1;
+
+
+}
+main section{
+    display: flex;
+    flex-flow: row wrap;
+    order: 2;
+
+}
+main section article{
+    width: 45%;
+}

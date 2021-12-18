@@ -1,0 +1,16 @@
+{
+	"folders": [
+		{
+			"path": "..\\Examenes-LMSGI"
+		},
+		{
+			"path": "."
+		},
+		{
+			"path": "..\\RepoClaseLMSGI"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "LMSGI"
+	}
+}

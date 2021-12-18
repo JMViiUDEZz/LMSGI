@@ -1,0 +1,36 @@
+.max-width {
+  padding: 0 80px;
+}
+header #up-btn {
+  height: 45px;
+  width: 42px;
+  right: 30px;
+  bottom: 10px;
+  line-height: 45px;
+  font-size: 30px;
+}
+.home .home-content {
+  display: flex;
+  width: 100%;
+}
+.sobremi .sobremi-content .right .text {
+  font-size: 25px;
+}
+.servicios .serv-content .card {
+  width: calc(50% - 10px);
+}
+.formacion .formacion-content .column {
+  width: calc(50% - 30px);
+}
+.formacion .formacion-content .left .text {
+  font-size: 20px;
+}
+.formacion .formacion-content .column,
+.contacto .contacto-content .column {
+  width: 100%;
+  margin-bottom: 35px;
+}
+.contacto .right form .fields {
+  display: flex;
+  flex-direction: row;
+}

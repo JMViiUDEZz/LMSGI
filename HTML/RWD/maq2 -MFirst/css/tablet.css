@@ -1,0 +1,30 @@
+
+body {
+    background-color: blue;
+}
+header i {
+    display: none !important;
+}
+header nav {
+    
+    display: block;
+}
+main{
+    flex-flow: row nowrap;
+    justify-content: center;
+}
+main nav{
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: red;
+    width: 90%;
+}
+main section{
+width: 80%;
+}
+main aside{
+width: 20%;
+display:block;
+background-color: green;
+
+}
