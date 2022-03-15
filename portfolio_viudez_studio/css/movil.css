@@ -171,7 +171,7 @@ header #up-btn:hover {
 }
 .home {
   display: flex;
-  background: url("/portfolio_viudez_studio/img/home.jpg") no-repeat center;
+  background: url("../img/home.jpg") no-repeat center;
   height: 100vh;
   color: #fff;
   min-height: 500px;

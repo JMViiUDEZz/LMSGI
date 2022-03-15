@@ -8,9 +8,16 @@
 		},
 		{
 			"path": "..\\RepoClaseLMSGI"
+		},
+		{
+			"path": "..\\PAR"
+		},
+		{
+			"path": "..\\Apuntes-LMSGI"
 		}
 	],
 	"settings": {
-		"liveServer.settings.multiRootWorkspaceName": "LMSGI"
+		"liveServer.settings.multiRootWorkspaceName": "LMSGI",
+		"git.ignoreLimitWarning": true
 	}
 }

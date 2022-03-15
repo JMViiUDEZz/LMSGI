@@ -1,0 +1,19 @@
+footer{
+  border: black 2px solid;
+  display: grid;
+  grid-template-columns: 4fr 2fr 4fr;
+  grid-template-rows: repeat(1, 1fr);
+  grid-template-areas:
+      "soc . map"
+  ;
+}
+
+footer app-footer-sociales{
+  grid-area: soc;
+  background-color: darkgreen;
+}
+
+footer app-footer-mapa{
+  grid-area: map;
+  background-color: indigo;
+}

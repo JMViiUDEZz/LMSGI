@@ -1,0 +1,24 @@
+main{
+  height: 600px;
+  display: grid;
+  grid-template-columns: 1fr 8fr 1fr;
+  grid-template-rows: repeat(1,1fr);
+  grid-template-areas:
+      "men cue asi"
+  ;
+  border: black 2px solid;
+}
+main app-main-menu{
+  grid-area: men;
+  background-color: blueviolet;
+}
+
+main app-main-cuerpo{
+  grid-area: cue;
+  background-color: red;
+}
+
+main app-main-aside{
+  grid-area: asi;
+  background-color: royalblue;
+}

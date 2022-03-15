@@ -1,0 +1,25 @@
+header{
+  display: grid;
+  grid-template-columns: 1fr 8fr 1fr;
+  grid-template-rows: repeat(1,1fr);
+  grid-template-areas:
+      "log men usu"
+  ;
+  border: black 2px solid;
+}
+
+header app-header-logo{
+  grid-area: log;
+  background-color: aqua;
+}
+
+header app-header-menu{
+  grid-area: men;
+  background-color: orange;
+}
+
+header app-header-usuario{
+  grid-area: usu;
+  background-color: pink;
+}
+

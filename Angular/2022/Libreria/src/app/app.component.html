@@ -1,0 +1,40 @@
+<h2>Usted tiene {{ anioNac }}</h2>
+<ol>
+  <li *ngFor="let peli of pelis.results">
+    {{ peli.original_title }}</li>
+</ol>
+<nav aria-label="Page navigation example">
+  <ul class="pagination">
+    <li class="page-item"><a class="page-link" onclick="getPagina(Previous)">Previous</a></li>
+    <li class="page-item"><a class="page-link" onclick="getPagina(1)">1</a></li>
+    <li class="page-item"><a class="page-link" onclick="getPagina(2)">2</a></li>
+    <li class="page-item"><a class="page-link" onclick="getPagina(3)">3</a></li>
+    <li class="page-item"><a class="page-link" onclick="getPagina(Next)">Next</a></li>
+  </ul>
+</nav>
+<div class="table-responsive">
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Logo</th>
+      <th scope="col">Id</th>
+      <th scope="col">Idioma</th>
+      <th scope="col">Título</th>
+      <th scope="col">Popularidad</th>
+      <th scope="col">Clasificación</th>
+      <th scope="col">Votos</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let peli of pelis.results">
+      <td><img src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/{{ peli.backdrop_path }}" alt=""></td>
+      <td>{{ peli.id }}</td>
+      <td>{{ peli.original_language }}</td>
+      <td>{{ peli.original_title }}</td>
+      <td>{{ peli.popularity }}</td>
+      <td>{{ peli.adult }}</td>
+      <td>{{ peli.vote_average }}</td>
+    </tr>
+  </tbody>
+</table>
+</div>
