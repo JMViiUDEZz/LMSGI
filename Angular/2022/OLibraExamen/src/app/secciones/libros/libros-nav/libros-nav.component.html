@@ -1,0 +1,44 @@
+<p>libros-nav works!</p>
+
+<nav>
+  <li class="list-group-item" >
+    <a class="nav-link"
+        [routerLink]="['/libros', {outlets: {cuerpo: ['new'] }}]">
+      <i class="fa-solid fa-plus"></i> Insertar Libro
+    </a>
+  </li>
+  <p>
+    <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+      Categorias
+    </button>
+  </p>
+  <div class="collapse" id="collapseExample">
+      <ul *ngIf="categorias" class="list-group">
+        <li *ngFor="let categoria of categorias" class="list-group-item"  >
+          <a class="nav-link"
+            [routerLink]="['/libros', {outlets: {cuerpo: ['list', categoria.category_id, categoria.name] }}]">
+            {{ categoria.name }}
+          </a>
+        </li>
+      </ul>
+  </div>
+  <p>
+    <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#ListaAutores" aria-expanded="false" aria-controls="ListaAutores">
+      Autores
+    </button>
+  </p>
+  <div class="collapse" id="ListaAutores">
+      <ul *ngIf="categorias" class="list-group">
+        <li *ngFor="let autor of autores" class="list-group-item"  >
+          <a class="nav-link"
+          >
+            {{autor}}
+          </a>
+        </li>
+      </ul>
+  </div>
+
+
+
+
+</nav>

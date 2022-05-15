@@ -1,0 +1,57 @@
+<p>libros works!</p>
+
+<div class="container">
+  <nav>
+    <h4>Menú de Categorías</h4>
+    <label for="exampleDataList" class="form-label">Categorias ...</label>
+    <input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Search Cateroria ...">
+    <!-- <datalist id="datalistOptions">
+      <option *ngFor="let categoria of categorias" value="{{ categoria.name }}">
+    </datalist> -->
+    <!-- <div class="btn-group">
+      <button type="button" class="btn btn-danger dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+        Categorias
+      </button>
+      <ul class="dropdown-menu">
+        <li *ngFor="let categoria of categorias">
+          <a class="dropdown-item" href="#">{{ categoria.name }}</a>
+        </li>
+      </ul>
+    </div> -->
+
+
+      <ul *ngIf="categorias" class="list-group">
+        <li (click) = getLibrosCategory(categoria.category_id)
+            *ngFor="let categoria of categorias" class="list-group-item"
+        >
+          {{ categoria.name }} -  {{ categoria.category_id}}
+        </li>
+      </ul>
+  </nav>
+  <section id="libros">
+    <h2>Lisdtado de Libros</h2>
+    <div class="container">
+      <table class="table-primary">
+        <thead>
+          <th>Logo</th>
+          <th>Codigo</th>
+          <th>Titulo</th>
+          <th>Autor</th>
+          <th>Publicado</th>
+          <th>Paginas</th>
+        </thead>
+        <tbody>
+          <tr *ngFor="let libro of libros">
+            <td> <img src="{{ libro.cover }}"></td>
+            <td> {{ libro.ID }}</td>
+            <td> {{ libro.title }}</td>
+            <td> {{ libro.author }}</td>
+            <td> {{ libro.publisher }}</td>
+            <td> {{ libro.pages }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+</div>

@@ -1,0 +1,22 @@
+main {
+  min-height: 500px;
+  background-color: rgba(0,0,0,.2);
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+main app-main-menu{
+  background-color: red;
+  width: 20%;
+  min-height: 200px;
+}
+
+main app-main-cuerpo{
+  background-color: yellow;
+  width: 60%;
+}
+
+main app-main-aside{
+  background-color: green;
+  width: 20%;
+}

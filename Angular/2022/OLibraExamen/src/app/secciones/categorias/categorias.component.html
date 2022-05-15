@@ -1,0 +1,17 @@
+
+<div class="container">
+  <table class="table-primary">
+    <thead>
+      <th>Id</th>
+      <th>nOMBRE</th>
+      <th>Nic</th>
+    </thead>
+    <tr *ngFor="let categoria of categorias" class="table-primary">
+      <td>{{ categoria.category_id }}</td>
+      <td>{{ categoria.name }}</td>
+      <td>{{ categoria.nicename }}</td>
+    </tr>
+  </table>
+
+</div>
+

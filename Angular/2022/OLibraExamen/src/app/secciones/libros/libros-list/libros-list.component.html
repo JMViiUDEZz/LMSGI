@@ -1,0 +1,23 @@
+<h2>Listado de Libros de la categoria {{ nombre }} </h2>
+<div class="container">
+  <table class="table-primary">
+    <thead>
+      <th>Logo</th>
+      <th>Codigo</th>
+      <th>Titulo</th>
+      <th>Autor</th>
+      <th>Publicado</th>
+      <th>Paginas</th>
+    </thead>
+    <tbody>
+      <tr *ngFor="let libro of libros">
+        <td> <img src="{{ libro.cover }}"></td>
+        <td> {{ libro.ID }}</td>
+        <td> {{ libro.title }}</td>
+        <td> {{ libro.author }}</td>
+        <td> {{ libro.publisher }}</td>
+        <td> {{ libro.pages }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

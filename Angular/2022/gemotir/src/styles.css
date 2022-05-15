@@ -46,16 +46,21 @@ h1,h2{ font-family: "Impact", sans-serif; }
 .bg-gray{ background: rgb(42, 42, 42) !important}
 .bg-acceso{ background: #ffb700 !important;}
 .bg-acceso a{  color:black !important}
-.carousel{ border-bottom: 50px black solid}
 .carousel-item > img{animation: zoom 1s}
 .carousel-caption {    bottom: 40%;}
 @keyframes zoom{
   from{ transform: scale(1.3,1.3)}
   to{ transform: scale(1,1)}
 }
+
+a.navbar-brand{
+  width:min-content;
+}
+
 nav a img{
-  width: 13%;
+  width: 100px;
   padding-left: 9px;
+  padding-bottom: 4px;
 }
 header #up-btn{
   position: fixed;
