@@ -1,0 +1,8 @@
+<app-busca></app-busca>
+<section class="container-fluid" id="cards__components">
+    <div class="row">
+        <div *ngFor="let personagem of personagens">
+            <app-personagem [personagem]="personagem"></app-personagem>
+        </div>
+    </div>
+</section>

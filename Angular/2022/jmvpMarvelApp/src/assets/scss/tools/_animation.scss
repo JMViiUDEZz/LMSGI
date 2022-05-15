@@ -1,0 +1,45 @@
+///
+/// Add animation to element.
+///
+/// @author drublic
+///
+/// @link http://caniuse.com/#feat=css-animation caniuse
+/// @link http://www.w3.org/TR/css3-animations spec
+///
+/// @param {List} $values
+///
+/// @output
+/// ```css
+///     -webkit-animation: <values>;
+///             animation: <values>;
+/// ```
+///
+/// @example
+///   .selector {
+///     @include animation(jump 1s ease-out);
+///   }
+///
+@mixin animation ($values) {
+    -webkit-animation: $values;
+    animation: $values;
+}
+
+///
+/// Generates keyframe animations.
+///
+/// @param {String} $name
+///
+/// @example
+///    @include keyframes(jump) {
+///      from { top: 0; }
+///      to { top: -10px; }
+///    }
+///
+@mixin keyframes ($name) {
+    @-webkit-keyframes #{$name} {
+        @content;
+    }
+    @keyframes #{$name} {
+        @content;
+    }
+}
