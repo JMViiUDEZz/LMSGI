@@ -11,22 +11,22 @@ import { routing } from './routes';
 import { AppComponent } from './app.component';
 import { Error404Component } from './error404/error404.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { PersonagensComponent } from './personagens/personagens.component';
-import { PersonagemComponent } from './personagens/personagem/personagem.component';
-import { BuscaComponent } from './personagens/busca/busca.component';
-import { DetalheComponent } from './personagens/detalhe/detalhe.component';
+import { PersonajesListaComponent } from './personajes/personajes-lista/personajes-lista.component';
+import { PersonajesBusquedaComponent } from './personajes/personajes-busqueda/personajes-busqueda.component';
+import { PersonajesDetalleComponent } from './personajes/personajes-detalle/personajes-detalle.component';
 import { HomeComponent } from './home/home.component';
 import { SafeHtmlPipe } from './tuberia/safe-html.pipe';
 import { HttpErrorInterceptor } from './http.interceptor';
+import { PersonajesComponent } from './personajes/personajes.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     Error404Component,
-    PersonagensComponent,
-    PersonagemComponent,
-    BuscaComponent,
-    DetalheComponent,
+    PersonajesComponent,
+    PersonajesListaComponent,
+    PersonajesBusquedaComponent,
+    PersonajesDetalleComponent,
     HomeComponent,
     SafeHtmlPipe,
   ],

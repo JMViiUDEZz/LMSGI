@@ -1,0 +1,25 @@
+<div class="col s12 m6 l4 xl3">
+    <div class="card card--marvel">
+        <div class="card-image waves-effect waves-block waves-light">
+        </div>
+        <div class="card-content">
+            <span class="card-title activator grey-text text-darken-4">
+                {{ personaje.name }} <i class="material-icons right">more_vert</i>
+            </span>
+            <div class="row">
+                <div class="card-badge">
+                    <a href="" class="card-badge-btn waves-effect yellow accent-4">wiki</a>
+                    <a href="" class="card-badge-btn waves-effect badge amber accent-3">comic link</a>
+                </div>
+            </div>
+            <button [routerLink]="['/',personaje.id]" class="waves-effect btn-block waves-light btn">detalles</button>
+        </div>
+        <div class="card-reveal">
+            <span class="card-title grey-text text-darken-4"> {{ personaje.name }} <i class="material-icons right">close</i></span>
+            <p *ngIf="personaje.description === ''"> No description was found for this character </p>
+            <p>{{ personaje?.description }}</p>
+            <p>Número de serie(s): {{ personaje.series.available }}</p>
+            <p>Comics: {{ personaje.comics.available }}</p>
+        </div>
+    </div>
+</div>

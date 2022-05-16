@@ -1,0 +1,78 @@
+.personagem__detalhe__name {
+    font-weight: bold;
+}
+
+.card-badge-btn {
+    color: map-get($white, 1);
+    .card-badge-btn-link {
+        color: map-get($white, 1)
+    }
+}
+
+.collection {
+    .collection-item {
+        &:hover {
+            background-color: map-get($gray, 1)
+        }
+    }
+}
+
+.personagem__detalhe__bg {
+    width: 100%;
+    height: 400px;
+    position: absolute;
+    background-repeat: no-repeat;
+    z-index: -1;
+    background-position: center center;
+    left: 0;
+    top: 0;
+    @include filter(blur, 5px);
+    @include opacity(0.5);
+    background-size: cover;
+}
+
+.personagem__detalhe__voltar {
+    @extend .personagem__detalhe__perfil;
+}
+
+.personagem__detalhe__plus {
+    @extend .personagem__detalhe__perfil;
+}
+
+.personagem__detalhe__perfil {
+    @include flexbox;
+    @include justify-content(center);
+    @include align-items(center);
+}
+
+.personagem__detalhe__pic {
+    @include flexbox;
+    @include justify-content(center);
+    @include align-items(center);
+    @include flex-direction(column);
+    .profile_pic {
+        width: 150px;
+        height: 150px;
+    }
+}
+
+//refatorando a página de detalhes
+.collection-scrool {
+    overflow-y: scroll;
+    max-height: 300px;
+    height: auto;
+}
+
+.comics__cover {
+    margin-top: .5rem
+}
+
+.collection-item-link {
+    cursor: pointer;
+}
+
+.bg__detalhe {
+    @extend .bg__home;
+    background-position: center -200px;
+    height: 300px;
+}
