@@ -57,7 +57,7 @@
                     </li>
                     <div class=" collection-scrool">
                         <li class="collection-item" *ngFor="let comic of  detalle.comics.items">
-                            <a class="collection-item-link" (click)="getDadosComicsDetalhes(comic.resourceURI)">
+                            <a class="collection-item-link" (click)="getDadosComicsDetalles(comic.resourceURI)">
                             {{comic.name}}
                         </a>
                         </li>
@@ -70,7 +70,7 @@
                     </li>
                     <div class=" collection-scrool">
                         <li class="collection-item" *ngFor="let serie of  detalle.series.items">
-                            <a (click)="getDadosComicsDetalhes(serie.resourceURI)" class="collection-item-link">
+                            <a (click)="getDadosComicsDetalles(serie.resourceURI)" class="collection-item-link">
                             {{serie.name}}
                         </a>
                         </li>

@@ -23,8 +23,8 @@ export class MarvelService {
     this.timeStamp + environment.PrivateKey + environment.PublicKey
   );
 
-  //getPersonagens
-  getPersonagens(): Observable<Personajes[]> {
+  //getPersonajes
+  getPersonajes(): Observable<Personajes[]> {
     return this.http
       .get<Personajes[]>(
         `${environment.MarvelEndpoint}/characters?&ts=${this.timeStamp}&apikey=${
@@ -40,7 +40,7 @@ export class MarvelService {
 
   //metodo de busca, criado outro método, pois a endpoint muda
   // https://gateway.marvel.com:443/v1/public/characters?nameStartsWith=spid&apikey=399252e317d7557e0a22b326084ab614
-  buscaPersonagens(term?:string): Observable<any> {
+  buscaPersonajes(term?:string): Observable<any> {
     return this.http
       .get<any>(
         `${environment.MarvelEndpoint}/characters?nameStartsWith=${term}&orderBy=name&ts=${this.timeStamp}&apikey=${environment.PublicKey}&hash=${this.hash}`)
@@ -53,8 +53,8 @@ export class MarvelService {
 
   //https://gateway.marvel.com:443/v1/public/characters/1011334?apikey=399252e317d7557e0a22b326084ab614
   // personagem por id
-  //getPersonagens
-  getPersonagemID(id: number): Observable<Personajes[]> {
+  //getPersonajes
+  getPersonajeID(id: number): Observable<Personajes[]> {
     return this.http
       .get<Personajes[]>(
         `${environment.MarvelEndpoint}/characters/${id}?&ts=${this.timeStamp}&apikey=${
@@ -84,7 +84,7 @@ export class MarvelService {
       );
   }
 
-  getPersonagemComic(url) {
+  getPersonajeComic(url) {
     return this.http.get(`${url}?&ts=${this.timeStamp}&apikey=${environment.PublicKey}&hash=${this.hash}`)
     .pipe(
       map(

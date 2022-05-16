@@ -21,10 +21,10 @@ export class PersonajesComponent implements OnInit {
 
   ngOnInit() {
     this.spinner.show(); //loading
-    this.getPersonagen();//carrega os cards de personajes iniciais
+    this.getPersonaje();//carrega os cards de personajes iniciais
 }
-  getPersonagen(){
-    return this.marvelService.getPersonagens().subscribe(
+  getPersonaje(){
+    return this.marvelService.getPersonajes().subscribe(
       (response => {
         this.personajes = response;
         this.spinner.hide();

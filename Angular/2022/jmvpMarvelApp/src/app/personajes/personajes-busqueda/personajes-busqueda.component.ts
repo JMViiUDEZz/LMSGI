@@ -29,7 +29,7 @@ export class PersonajesBusquedaComponent implements OnInit {
     this.formBusca = this.fb.group({
       campoDeBusca: this.campoDeBusca
     });
-    this.buscarPersonagem();
+    this.buscarPersonaje();
 
     //adiciona class no body da busca
     document.body.classList.add('bgBusca')
@@ -40,10 +40,10 @@ export class PersonajesBusquedaComponent implements OnInit {
     document.body.classList.remove('bgBusca')
   }
 
-  buscarPersonagem(){
+  buscarPersonaje(){
     this.campoDeBusca.valueChanges.pipe(
       switchMap(
-        ()=> this.marvelService.buscaPersonagens(this.campoDeBusca.value)
+        ()=> this.marvelService.buscaPersonajes(this.campoDeBusca.value)
       )
     ).subscribe(
       (response => {

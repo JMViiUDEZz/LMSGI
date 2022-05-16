@@ -30,13 +30,13 @@ export class PersonajesDetalleComponent implements OnInit {
 
   ngOnInit() {
     this.spinner.show(); //loading
-    this.getPersonagemById();
+    this.getPersonajeById();
     this.getComicsID();
   }
 
-  getPersonagemById(){
+  getPersonajeById(){
     this.spinner.show(); //loading
-    this.marvelService.getPersonagemID(this.router.snapshot.params[`id`])
+    this.marvelService.getPersonajeID(this.router.snapshot.params[`id`])
     .subscribe(response => {
       this.detalles = response //recebe personajes
       console.log(this.detalles)
@@ -59,9 +59,9 @@ export class PersonajesDetalleComponent implements OnInit {
   }
 
   //lista as revistas do detalle dos comics
-  getDadosComicsDetalhes(url) {
+  getDadosComicsDetalles(url) {
     this.spinner.show(); //loading
-    this.marvelService.getPersonagemComic(url).subscribe( response  =>{
+    this.marvelService.getPersonajeComic(url).subscribe( response  =>{
       this.dataInfo = response.data.results[0]
       this.dataDescription = `${response.data.results[0].description}`;
       this.dataImage = `${response.data.results[0].thumbnail.path}.${response.data.results[0].thumbnail.extension}`;
