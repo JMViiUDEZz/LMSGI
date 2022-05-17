@@ -13,7 +13,7 @@ import { Personajes } from "../../interfaces/IPersonajes";
 export class PersonajesBusquedaComponent implements OnInit {
 
   public personajeResult:Personajes[];
-  //form de busca de personagems
+  //formulario de búsqueda de caracteres
   formBusca: FormGroup;
   campoDeBusca: FormControl;
   errorMsg: any;
@@ -31,12 +31,12 @@ export class PersonajesBusquedaComponent implements OnInit {
     });
     this.buscarPersonaje();
 
-    //adiciona class no body da busca
+    //agregar clase al cuerpo de búsqueda
     document.body.classList.add('bgBusca')
   }
 
   ngOnDestroy() {
-    //remove class no body da busca
+    //quitar clase en el cuerpo de búsqueda
     document.body.classList.remove('bgBusca')
   }
 
@@ -56,7 +56,7 @@ export class PersonajesBusquedaComponent implements OnInit {
     )
   }
 
-  //remove a msg de erro do DOM
+  //eliminar el mensaje de error DOM
   toogle(){
     let el = document.getElementById('errorMsg');
     console.log(el.parentNode.removeChild(el));

@@ -17,7 +17,7 @@ export class PersonajesDetalleComponent implements OnInit {
   public comics:any[] = [];
   public comicsImage:string;
 
-  public dataInfo:any[]=[]; // remover teste
+  public dataInfo:any[]=[]; // quitar prueba
   public dataImage:any;
   public dataDescription: any;
   public notDescription: string = 'No description was found for this character';
@@ -29,44 +29,44 @@ export class PersonajesDetalleComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.spinner.show(); //loading
+    this.spinner.show(); //cargando
     this.getPersonajeById();
     this.getComicsID();
   }
 
   getPersonajeById(){
-    this.spinner.show(); //loading
+    this.spinner.show(); //cargando
     this.marvelService.getPersonajeID(this.router.snapshot.params[`id`])
     .subscribe(response => {
-      this.detalles = response //recebe personajes
+      this.detalles = response //recibir personajes
       console.log(this.detalles)
-      this.spinner.hide(); //loading
+      this.spinner.hide(); //cargando
     });
 
   }
 
 
   getComicsID(){
-    this.spinner.show(); //loading
+    this.spinner.show(); //cargando
     this.marvelService.getComics(this.router.snapshot.params[`id`],'comics')
     .subscribe(response => {
       this.comics = response;
       this.comicsImage = `${this.comics[0].thumbnail.path}.${this.comics[0].thumbnail.extension}`;
       console.log(this.comics);
-      this.spinner.hide(); //loading
+      this.spinner.hide(); //cargando
     });
 
   }
 
-  //lista as revistas do detalle dos comics
+  //lista comics, detalle y revistas
   getDadosComicsDetalles(url) {
-    this.spinner.show(); //loading
+    this.spinner.show(); //cargando
     this.marvelService.getPersonajeComic(url).subscribe( response  =>{
       this.dataInfo = response.data.results[0]
       this.dataDescription = `${response.data.results[0].description}`;
       this.dataImage = `${response.data.results[0].thumbnail.path}.${response.data.results[0].thumbnail.extension}`;
       console.log(this.dataInfo)
-      this.spinner.hide(); //loading
+      this.spinner.hide(); //cargando
     })
   }
 }

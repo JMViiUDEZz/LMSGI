@@ -3,7 +3,7 @@
     <section id="detalhe__component-perfil" class="container">
         <div class="row ">
             <div class="col s1">
-                <!-- btn voltar -->
+                <!-- btn atrás -->
                 <div class="personagem__detalhe__voltar ">
                     <a [routerLink]="[ '/'] " class="btn-floating pulse ">
                         <i class="large material-icons ">arrow_back</i>
@@ -15,7 +15,7 @@
 
     <section class="detalhe__componente__item container-fluid">
         <div class="row">
-            <!-- coluna 1 -->
+            <!-- columna 1 -->
             <div class="col s12 l3">
                 <div class="card card--marvel" *ngFor="let detalle of detalles">
                     <div class="card-image waves-effect waves-block waves-light">
@@ -48,7 +48,7 @@
                     </div>
                 </div>
             </div>
-            <!-- coluna 2 -->
+            <!-- columna 2 -->
             <div class="col s12 l5">
                 <!-- COMICS -->
                 <ul class="collection with-header" *ngFor="let detalle of detalles">
@@ -77,7 +77,7 @@
                     </div>
                 </ul>
             </div>
-            <!-- coluna 3 -->
+            <!-- columna 3 -->
             <div class="col s12 l4 comics__detalhes__comic">
                 <div class="comics__cover">
                     <img class="card-img" *ngIf="dataImage != null" [src]=" dataImage " class="responsive-img">

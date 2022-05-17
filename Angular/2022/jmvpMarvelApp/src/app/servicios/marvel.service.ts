@@ -13,12 +13,12 @@ import { Personajes } from "../interfaces/IPersonajes";
 export class MarvelService {
 
   constructor(private http: HttpClient) {
-    //console.log("verificação da hash de acesso", this.hash);
+    //console.log("verificación de hash de acceso", this.hash);
   }
 
-  //cria o timestamp
+  //crear la marca de tiempo
   private timeStamp = new Date().getTime();
-  //cria o hash
+  //crear el hash
   private hash = Md5.hashStr(
     this.timeStamp + environment.PrivateKey + environment.PublicKey
   );
@@ -38,7 +38,7 @@ export class MarvelService {
       );
   }
 
-  //metodo de busca, criado outro método, pois a endpoint muda
+  //método de búsqueda, creó otro método, porque el punto final cambia
   // https://gateway.marvel.com:443/v1/public/characters?nameStartsWith=spid&apikey=399252e317d7557e0a22b326084ab614
   buscaPersonajes(term?:string): Observable<any> {
     return this.http
@@ -52,7 +52,7 @@ export class MarvelService {
   }
 
   //https://gateway.marvel.com:443/v1/public/characters/1011334?apikey=399252e317d7557e0a22b326084ab614
-  // personagem por id
+  // personaje por id
   //getPersonajes
   getPersonajeID(id: number): Observable<Personajes[]> {
     return this.http
@@ -68,7 +68,7 @@ export class MarvelService {
       );
   }
 
-  //pega o comic por id do personagem
+  //obtener el cómic por id de personaje
   //https://gateway.marvel.com:443/v1/public/characters/1011114/comics?format=comic&apikey=399252e317d7557e0a22b326084ab614
   getComics(id: number, comics:string): Observable<Personajes[]> {
     return this.http
