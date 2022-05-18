@@ -18,7 +18,9 @@ export class MarvelService {
 
   //crear la marca de tiempo
   private timeStamp = new Date().getTime();
-  //crear el hash
+  //crear el hash: Las funciones hash son funciones o técnicas que se utilizan para codificar contraseñas y otro texto sin formato en texto ilegible para almacenar y transmitir. Hay muchos tipos de Hash basadas en la forma en que se codifica el texto sin formato.
+  //https://protecciondatos-lopd.com/empresas/hash/#:~:text=Las%20funciones%20hash%20son%20funciones,codifica%20el%20texto%20sin%20formato.
+  //https://code.tutsplus.com/es/tutorials/how-to-hash-and-decrypt-with-md5-in-javascript--cms-38297
   private hash = Md5.hashStr(
     this.timeStamp + environment.PrivateKey + environment.PublicKey
   );
@@ -38,7 +40,7 @@ export class MarvelService {
       );
   }
 
-  //método de búsqueda, creó otro método, porque el punto final cambia
+  //método de búsqueda, creo otro método, porque el punto final cambia
   // https://gateway.marvel.com:443/v1/public/characters?nameStartsWith=spid&apikey=399252e317d7557e0a22b326084ab614
   buscaPersonajes(term?:string): Observable<any> {
     return this.http

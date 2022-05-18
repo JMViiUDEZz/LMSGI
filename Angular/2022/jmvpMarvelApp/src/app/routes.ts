@@ -9,8 +9,8 @@ import { PersonajesDetalleComponent } from "./personajes/personajes-detalle/pers
 const appRoutes: Routes = [
   //{ path: "", component: PersonagensComponent },
   { path: "", component: HomeComponent },
-  { path: "detail/:id", component: PersonajesDetalleComponent },
-  { path: "**", component: Error404Component }
+  { path: "detail/:id", component: PersonajesDetalleComponent }, //componente app-personajes-detalle con los detalles del personaje por id
+  { path: "**", component: Error404Component } //mensaje error
 ];
 
 export const routing: ModuleWithProviders = RouterModule.forRoot(

@@ -33,7 +33,7 @@ export class PersonajesDetalleComponent implements OnInit {
     this.getPersonajeById();
     this.getComicsID();
   }
-
+ //esta funcion llama a la funcion de personaje por id
   getPersonajeById(){
     this.spinner.show(); //cargando
     this.marvelService.getPersonajeID(this.router.snapshot.params[`id`])
@@ -45,7 +45,7 @@ export class PersonajesDetalleComponent implements OnInit {
 
   }
 
-
+ //esta funcion llama a la funcion que obtiene el cómic por id de personaje
   getComicsID(){
     this.spinner.show(); //cargando
     this.marvelService.getComics(this.router.snapshot.params[`id`],'comics')
