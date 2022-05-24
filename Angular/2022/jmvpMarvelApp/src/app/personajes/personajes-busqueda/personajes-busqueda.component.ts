@@ -14,6 +14,7 @@ export class PersonajesBusquedaComponent implements OnInit {
 
   public personajeResult:Personajes[];
   //formulario de búsqueda de personajes
+  //https://classroom.google.com/u/4/c/NDA4ODU5MTg2NjQ1/m/MjI4MDYyODQxMTQ0/details
   formBusca: FormGroup; //FormGroup es un cojunto de FormControls, el estado de este objeto depende del estado de todos sus objetos, es decir, si uno de los FormControl es inválido, el grupo entero es inválido.
   campoDeBusca: FormControl; //FormControl es un objeto qué se usa en los formularios para tener un control sobre su valor y su estado en el formulario.
   errorMsg: any; //mensaje de error
