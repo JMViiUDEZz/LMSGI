@@ -42,24 +42,26 @@ export class PersonajesBusquedaComponent implements OnInit {
   }
 
   buscarPersonaje(){
+    //los caracteres del campo de busqueda aparecerán en mayúscula
     this.campoDeBusca.valueChanges.pipe(
       switchMap(
         ()=> this.marvelService.buscaPersonajes(this.campoDeBusca.value)
+        // llama a la función para buscar al personaje
       )
     ).subscribe(
       (response => {
-        this.personajeResult = response;
-        console.log('personaje buscado ->',response);
+        this.personajeResult = response; //respuesta: personaje encontrado
+        console.log('personaje buscado ->',response); //muestra personaje encontrado por consola
       }),
       error => {
-        this.errorMsg = error
+        this.errorMsg = error //si no se encuentra el personajes, aparece el mensaje de error
       }
     )
   }
 
   //toggle es un tipo de interruptor o botón que se usa para alternar entre estados como uno y apagado o verdadero o falso, por lo que este eliminará el mensaje de error
   toogle(){
-    let el = document.getElementById('errorMsg');
-    console.log(el.parentNode.removeChild(el));
+    let el = document.getElementById('errorMsg'); //aparece el error
+    console.log(el.parentNode.removeChild(el)); // cuando se cierra el mensaje, muestra el mensaje de error por consola
   }
 }

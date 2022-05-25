@@ -30,16 +30,16 @@ export class PersonajesDetalleComponent implements OnInit {
 
   ngOnInit() {
     this.spinner.show(); //cargando
-    this.getPersonajeById();
-    this.getComicsID();
+    this.getPersonajeById();//cargar detalles personaje por id
+    this.getComicsID();//cargar comics personaje por id
   }
  //esta funcion llama a la funcion de personaje por id
   getPersonajeById(){
     this.spinner.show(); //cargando
-    this.marvelService.getPersonajeID(this.router.snapshot.params[`id`])
+    this.marvelService.getPersonajeID(this.router.snapshot.params[`id`]) //carga en la ruta, donde aparece el id del personaje seleccionado
     .subscribe(response => {
       this.detalles = response //recibir personajes
-      console.log(this.detalles)
+      console.log(this.detalles) //muestra personajes en la consola
       this.spinner.hide(); //cargando
     });
 
@@ -48,11 +48,11 @@ export class PersonajesDetalleComponent implements OnInit {
  //esta funcion llama a la funcion que obtiene el cómic por id de personaje
   getComicsID(){
     this.spinner.show(); //cargando
-    this.marvelService.getComics(this.router.snapshot.params[`id`],'comics')
+    this.marvelService.getComics(this.router.snapshot.params[`id`],'comics') //carga en la ruta, donde aparece el parámetro id del comic seleccionado
     .subscribe(response => {
-      this.comics = response;
-      this.comicsImage = `${this.comics[0].thumbnail.path}.${this.comics[0].thumbnail.extension}`;
-      console.log(this.comics);
+      this.comics = response; //recibir comics
+      this.comicsImage = `${this.comics[0].thumbnail.path}.${this.comics[0].thumbnail.extension}`; //muestra la imagen del comic
+      console.log(this.comics); //muestra comics en la consola
       this.spinner.hide(); //cargando
     });
 
@@ -61,11 +61,12 @@ export class PersonajesDetalleComponent implements OnInit {
   //lista comics, detalle y revistas
   getDadosComicsDetalles(url) {
     this.spinner.show(); //cargando
-    this.marvelService.getPersonajeComic(url).subscribe( response  =>{
-      this.dataInfo = response.data.results[0]
-      this.dataDescription = `${response.data.results[0].description}`;
-      this.dataImage = `${response.data.results[0].thumbnail.path}.${response.data.results[0].thumbnail.extension}`;
-      console.log(this.dataInfo)
+    this.marvelService.getPersonajeComic(url) //carga la ruta
+    .subscribe( response  =>{
+      this.dataInfo = response.data.results[0] //muestra la información del comic
+      this.dataDescription = `${response.data.results[0].description}`; //muestra la descripción del comic
+      this.dataImage = `${response.data.results[0].thumbnail.path}.${response.data.results[0].thumbnail.extension}`; //muestra la imagen del comic
+      console.log(this.dataInfo) //muestra comic en la consola
       this.spinner.hide(); //cargando
     })
   }

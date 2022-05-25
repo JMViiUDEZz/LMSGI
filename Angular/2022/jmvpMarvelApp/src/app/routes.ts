@@ -7,8 +7,8 @@ import { PersonajesDetalleComponent } from "./personajes/personajes-detalle/pers
 
 
 const appRoutes: Routes = [
-  //{ path: "", component: PersonagensComponent },
-  { path: "", component: HomeComponent },
+  //{ path: "", component: PersonajesComponent },
+  { path: "", component: HomeComponent }, //componente home que es el principal
   { path: "detail/:id", component: PersonajesDetalleComponent }, //componente app-personajes-detalle con los detalles del personaje por id
   { path: "**", component: Error404Component } //mensaje error
 ];
