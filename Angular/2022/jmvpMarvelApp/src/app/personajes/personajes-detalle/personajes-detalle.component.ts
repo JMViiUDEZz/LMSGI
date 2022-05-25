@@ -38,7 +38,7 @@ export class PersonajesDetalleComponent implements OnInit {
     this.spinner.show(); //cargando
     this.marvelService.getPersonajeID(this.router.snapshot.params[`id`]) //carga en la ruta, donde aparece el id del personaje seleccionado
     .subscribe(response => {
-      this.detalles = response //recibir personajes
+      this.detalles = response //recibir personajes al array detalles
       console.log(this.detalles) //muestra personajes en la consola
       this.spinner.hide(); //cargando
     });
@@ -50,8 +50,8 @@ export class PersonajesDetalleComponent implements OnInit {
     this.spinner.show(); //cargando
     this.marvelService.getComics(this.router.snapshot.params[`id`],'comics') //carga en la ruta, donde aparece el parámetro id del comic seleccionado
     .subscribe(response => {
-      this.comics = response; //recibir comics
-      this.comicsImage = `${this.comics[0].thumbnail.path}.${this.comics[0].thumbnail.extension}`; //muestra la imagen del comic
+      this.comics = response; //recibir comics al array comics
+      this.comicsImage = `${this.comics[0].thumbnail.path}.${this.comics[0].thumbnail.extension}`; //recibir la imagen del comic
       console.log(this.comics); //muestra comics en la consola
       this.spinner.hide(); //cargando
     });
@@ -63,9 +63,9 @@ export class PersonajesDetalleComponent implements OnInit {
     this.spinner.show(); //cargando
     this.marvelService.getPersonajeComic(url) //carga la ruta
     .subscribe( response  =>{
-      this.dataInfo = response.data.results[0] //muestra la información del comic
-      this.dataDescription = `${response.data.results[0].description}`; //muestra la descripción del comic
-      this.dataImage = `${response.data.results[0].thumbnail.path}.${response.data.results[0].thumbnail.extension}`; //muestra la imagen del comic
+      this.dataInfo = response.data.results[0] //recibir la información del comic al array dataInfo
+      this.dataDescription = `${response.data.results[0].description}`; //recibir la descripción del comic a dicha variable
+      this.dataImage = `${response.data.results[0].thumbnail.path}.${response.data.results[0].thumbnail.extension}`; //recibir la imagen del comic a dicha variable
       console.log(this.dataInfo) //muestra comic en la consola
       this.spinner.hide(); //cargando
     })

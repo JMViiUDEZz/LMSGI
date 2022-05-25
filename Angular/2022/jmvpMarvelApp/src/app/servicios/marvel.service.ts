@@ -92,7 +92,7 @@ export class MarvelService {
         })
       );
   }
-
+  //muestra la imagen y la descripcion del comic seleccionado
   getPersonajeComic(url) {
     return this.http.get(`${url}?&ts=${this.timeStamp}&apikey=${environment.PublicKey}&hash=${this.hash}`)
     .pipe(

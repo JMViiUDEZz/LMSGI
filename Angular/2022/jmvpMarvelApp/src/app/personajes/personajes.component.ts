@@ -23,12 +23,13 @@ export class PersonajesComponent implements OnInit {
     this.spinner.show(); //cargando
     this.getPersonaje();//cargar cartas de personajes iniciales
 }
+  //esta funcion llama a la funcion de personajes
   getPersonaje(){
     return this.marvelService.getPersonajes().subscribe(
       (response => {
-        this.personajes = response;
-        this.spinner.hide();
-        console.log(response)
+        this.personajes = response; //recibir personajes
+        this.spinner.hide(); //cargando
+        console.log(response) //muestra personajes en la consola
       })
     )
   }
